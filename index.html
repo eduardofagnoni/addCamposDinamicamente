@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+<h2>Lista de Presença</h2>
+<hr>
+<p>Preencha o formulário abaixo e confirme sua presença.</p>
+
+<form id="frmLista" name="frmLista" action="" method="post">
+	<div>
+		<label>Nome</label><br>
+		<input type="text" name="txtNome" id="txtNome" placeholder="Nome">
+	</div>
+
+	<div>
+		<label>E-mail *</label><br>
+		<input type="text" name="txtEmail" id="txtEmail" placeholder="Email">
+	</div>
+
+	<div>
+		<label>Telefone</label><br>
+		<input type="text" name="txtTelefone" id="txtTelefone" placeholder="Telefone" maxlength="14">
+	</div>
+
+	<div>
+
+		<p>Pretende levar algum acompanhante? Se sim, diga-nos quantos.</p>
+
+		<table cellspacing="0" cellpadding="0" width="100%">
+			<tr>
+				<td width="70px">
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Sim" onchange="selectSim();"> Sim, 
+					</label>
+				</td>
+				<td width="70px">
+					<select class="form-control" id="txtQtd" name="txtQtd" onchange="criaCaixasDeTexto(this.value);">
+						<option selected="selected">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</td>
+				<td>
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Nao" onchange="selectNao();"> Não
+					</label>
+				</td>
+			</tr>
+		</table>
+
+		<div id="main" class="main"></div>
+
+	</div>
+
+	<div>
+		<button class="btn btn-default" type="submit">Enviar</button>
+	</div>
+		
+</form>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="formulario.js"></script>
+
+</body>
+</html>
